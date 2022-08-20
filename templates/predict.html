@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Compressive strength prediction</title>
+{% endblock %}
+
+
+{% block body %}
+    <h1>Prediction of Compressive Strength of Concrete using Artificial Neural Networks</h1>
+
+    <hr>
+
+    <h2>Enter Values</h2>
+    <form action="/predict" method='POST'>
+        Age: <input type="text" name="age" id="age">
+        <br>
+        W/B Ratio: <input type="text" name="wb" id="wb">
+        <br>
+        Fly Ash: <input type="text" name="fly_ash" id="fly_ash">
+        <br>
+        A/B Ratio: <input type="text" name="ab" id="ab">
+        <br>
+        <button id="sub" type="submit">Predict</button>
+    </form>
+    <br>
+    <hr>
+    {{ text }}
+    
+{% endblock %}
